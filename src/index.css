@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/bebasneue/bebasneuebold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/roboto/Robotobold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/roboto/Robotolight.woff2") format("woff2");
+}
+
+@theme {
+  --font-bebas: "Bebas Neue", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --page-bg: #242424;
+  --text-color: #fafaf5;
+  --accent-color: #ffd479;
+}
+
+:root {
+  font-family: var(--font-bebas);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--page-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #1F2A32;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+@layer components {
+  main {
+    @apply w-full overflow-x-hidden;
+  }
+
+  .с-container {
+    @apply mx-auto px-4 max-w-[1202px];
+  }
+
+  header {
+    @apply absolute top-7.5 w-full;
+  }
+
+  nav {
+    @apply flex justify-between;
+
+    ul {
+      @apply hidden md:flex items-center gap-[50px];
+
+    }
+
+    a {
+      @apply font-bold;
+      letter-spacing: 0.19em;
+      text-align: right;
+    }
+  }
+
+  #hero {
+    @apply w-full h-[100vh] flex justify-end items-center;
+    background-image: image-set(url('/img/hero/hero-bg.jpg') 1x,
+        url('/img/hero/hero-bg@2x.jpg') 2x);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .с-container {
+      @apply w-full flex justify-center md:justify-end items-center
+    }
+  }
+}
