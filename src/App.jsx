@@ -1,5 +1,6 @@
 import Hero from './components/Hero'
 import Header from './components/Header'
+import Trainers from './components/Trainers'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <main>
       <Header />
       <Hero />
+      <Trainers />
     </main>
   )
 }
