@@ -1,8 +1,39 @@
-import { trainers } from "../../../constants"
+import { trainers } from "../../constants"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
+import { useRef } from "react"
 
 const Trainers = () => {
+    const sectionRef = useRef();
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: '10% center',
+                end: 'center top',
+            }
+        });
+
+        tl.fromTo('ul li', { autoAlpha: 0, xPercent: -100, scale: 0.8 }, {
+            autoAlpha: 1,
+            xPercent: 0,
+            scale: 1,
+            // stagger: 0.11,
+            stagger: {
+                // wrap advanced options in an object
+                each: 0.2,
+                from: 'start',
+                grid: [2,2],
+                ease: 'power2.inOut',
+            },
+            duration: .6,
+            ease: 'back.out'
+        });
+    }, { scope: sectionRef })
+
     return (
-        <section id="trainers" className="pt-30">
+        <section id="trainers" className="pt-30" ref={sectionRef}>
             <div className="container mx-auto max-w-6xl sm:px-4 px-2">
                 <h2 className="text-accent text-8xl text-center font-bold">Персональные тренера</h2>
                 <p className="text-center font-light font-roboto mb-12.5 text-base/8">В нашей команде профессиональные тренеры, которые помогут вам достичь ваших фитнес-целей. Индивидуальный подход, мотивация и поддержка на каждом этапе вашего пути к успеху.</p>
@@ -23,7 +54,8 @@ const Trainers = () => {
                             opacity-0
                             hover:opacity-100
                             transition
-                            duration-300
+                            duration-600
+                            ease-out
                             ">{name}</span>
                             <img className="rounded-lg md:rounded-[20px] w-full select-none" src={src} srcSet={srcSet} alt={`Тренер ${name}`}
                                 draggable="false" /></li>)

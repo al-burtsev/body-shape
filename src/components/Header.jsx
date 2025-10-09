@@ -1,8 +1,38 @@
-import { navLinks } from "../../../constants"
+import { navLinks } from "../../constants"
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
-const Header = () => {
+const Header = ({ timeline }) => {
+  const container = useRef();
+
+  useGSAP(() => {
+    gsap.set('li', {
+      x: -100,
+      autoAlpha: 0,
+    });
+
+    timeline
+      .fromTo('img', {
+        autoAlpha: 0,
+        xPercent: -100,
+      }, {
+        autoAlpha: 1,
+        xPercent: 0,
+        duration: .6,
+        ease: 'back.in'
+      })
+      .to('li', {
+        x: 0,
+        stagger: 0.1,
+        autoAlpha: 1,
+        duration: .6,
+        ease: "back.out"
+      }, '-=.1')
+  }, { dependencies: [timeline], scope: container })
+
   return (
-    <header>
+    <header ref={container}>
       <div className="container mx-auto max-w-6xl sm:px-4 px-2">
         <nav>
           <a href="/" className="logo">
