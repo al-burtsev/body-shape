@@ -10,7 +10,7 @@ const Trainers = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: sectionRef.current,
-                start: '10% center',
+                start: 'top 55%',
                 end: 'center top',
             }
         });
@@ -19,13 +19,10 @@ const Trainers = () => {
             autoAlpha: 1,
             xPercent: 0,
             scale: 1,
-            // stagger: 0.11,
             stagger: {
                 // wrap advanced options in an object
-                each: 0.2,
-                from: 'start',
-                grid: [2,2],
-                ease: 'power2.inOut',
+                amount: .5,
+                from: 'edges',
             },
             duration: .6,
             ease: 'back.out'
@@ -33,9 +30,9 @@ const Trainers = () => {
     }, { scope: sectionRef })
 
     return (
-        <section id="trainers" className="pt-30" ref={sectionRef}>
+        <section id="trainers" className="mb-18 md:mb-37.5 overflow-hidden" ref={sectionRef}>
             <div className="container mx-auto max-w-6xl sm:px-4 px-2">
-                <h2 className="text-accent text-8xl text-center font-bold">Персональные тренера</h2>
+                <h2 className="text-accent text-5xl md:text-8xl text-center font-bold tracking-wider">Персональные тренера</h2>
                 <p className="text-center font-light font-roboto mb-12.5 text-base/8">В нашей команде профессиональные тренеры, которые помогут вам достичь ваших фитнес-целей. Индивидуальный подход, мотивация и поддержка на каждом этапе вашего пути к успеху.</p>
                 <ul className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 sm:gap-4 md:gap-x-7.5 md:gap-y-8 justify-items-center">
                     {trainers.map(({ id, name, src, srcSet }) => {

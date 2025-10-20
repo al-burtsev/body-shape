@@ -71,7 +71,7 @@ body {
     @apply flex justify-between;
 
     ul {
-      @apply hidden md:flex items-center gap-[50px];
+      @apply hidden md: flex items-center gap-[50px];
 
     }
 
