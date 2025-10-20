@@ -2,8 +2,22 @@ import { trainers } from "../../constants"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { useRef } from "react"
+import { useMediaQuery } from 'react-responsive'
+
 
 const Trainers = () => {
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+
+    const tlSettings = isMobile ? {
+        triggerEnd: '25% top',
+        scrub: 0.1,
+        duration: 0.2,
+    } : {
+        triggerEnd: 'center top',
+        scrub: false,
+        duration: 0.6,
+    };
+
     const sectionRef = useRef();
 
     useGSAP(() => {
@@ -11,20 +25,22 @@ const Trainers = () => {
             scrollTrigger: {
                 trigger: sectionRef.current,
                 start: 'top 55%',
-                end: 'center top',
+                end: tlSettings.triggerEnd,
+                scrub: tlSettings.scrub,
             }
         });
 
-        tl.fromTo('ul li', { autoAlpha: 0, xPercent: -100, scale: 0.8 }, {
+        tl.fromTo('ul li', { autoAlpha: 0, yPercent: -100, scale: 0.8 }, {
             autoAlpha: 1,
-            xPercent: 0,
+            yPercent: 0,
             scale: 1,
             stagger: {
-                // wrap advanced options in an object
-                amount: .5,
-                from: 'edges',
+                amount: 0.2,
+                grid: 'auto',
+                axis: 'y',
+                ease: 'power2.out'
             },
-            duration: .6,
+            duration: tlSettings.duration,
             ease: 'back.out'
         });
     }, { scope: sectionRef })
@@ -50,6 +66,7 @@ const Trainers = () => {
                             rounded-lg md:rounded-[20px]
                             opacity-0
                             hover:opacity-100
+                            active:opacity-100
                             transition
                             duration-600
                             ease-out

@@ -17,10 +17,10 @@ const Intensive = () => {
             ease: 'back.inOut'
         });
 
-        tl.fromTo(sectionRef.current, { opacity: 0.5, scale: 0.8 }, {
+        tl.fromTo(sectionRef.current, { opacity: 0.5, scale: 0.9 }, {
             autoAlpha: 1,
             xPercent: 0,
-            scale: 1.2,
+            scale: 1.05,
         })
             .to(sectionRef.current, { scale: 1 });
     }, { scope: sectionRef })

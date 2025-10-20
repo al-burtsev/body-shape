@@ -5,6 +5,8 @@ import Hero from './components/Hero'
 import Header from './components/Header'
 import Trainers from './components/Trainers'
 import Intensive from './components/Intensive';
+import Programs from './components/Programs';
+import Footer from './components/Footer';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -18,7 +20,9 @@ function App() {
         <Hero timeline={startTl.current} />
         <Trainers />
         <Intensive />
+        <Programs />
       </main>
+      <Footer />
     </>
   )
 }

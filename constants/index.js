@@ -67,3 +67,54 @@ export const trainers = [
         name: "Stefania Grant",
     },
 ];
+
+export const programs = [
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/groups/program-01.jpg",
+        srcSet: "img/groups/program-01@2x.jpg 2x",
+        title: "Тренировки",
+    },
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/groups/program-02.jpg",
+        srcSet: "img/groups/program-02@2x.jpg 2x",
+        title: "Кроссфит",
+    },
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/groups/program-03.jpg",
+        srcSet: "img/groups/program-03@2x.jpg 2x",
+        title: "Пилатес",
+    },
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/groups/program-04.jpg",
+        srcSet: "img/groups/program-04@2x.jpg 2x",
+        title: "Аэробика",
+    },
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/groups/program-05.jpg",
+        srcSet: "img/groups/program-05@2x.jpg 2x",
+        title: "Выносливость",
+    },
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/groups/program-06.jpg",
+        srcSet: "img/groups/program-06@2x.jpg 2x",
+        title: "Выступления",
+    },
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/groups/program-07.jpg",
+        srcSet: "img/groups/program-07@2x.jpg 2x",
+        title: "Фитнес",
+    },
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/groups/program-08.jpg",
+        srcSet: "img/groups/program-08@2x.jpg 2x",
+        title: "Рельеф",
+    },
+]
