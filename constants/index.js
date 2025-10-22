@@ -4,11 +4,11 @@ export const navLinks = [
         title: 'Инструкторы',
     },
     {
-        id: 'sections',
+        id: 'programs',
         title: 'Секции',
     },
     {
-        id: 'news',
+        id: '#',
         title: 'Новости',
     },
     {
@@ -116,5 +116,28 @@ export const programs = [
         src: "/img/groups/program-08.jpg",
         srcSet: "img/groups/program-08@2x.jpg 2x",
         title: "Рельеф",
+    },
+]
+
+export const socials = [
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/socials/vk.svg",
+        title: 'VK',
+    },
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/socials/rutube.svg",
+        title: 'Rutube',
+    },
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/socials/dzen.svg",
+        title: 'Dzen',
+    },
+    {
+        id: self.crypto.randomUUID(),
+        src: "/img/socials/telegram.svg",
+        title: 'Telegram',
     },
 ]

@@ -15,12 +15,14 @@ const Header = ({ timeline }) => {
     timeline
       .fromTo('img', {
         autoAlpha: 0,
-        xPercent: -100,
+        xPercent: -75,
+        scale: 0.8,
       }, {
         autoAlpha: 1,
         xPercent: 0,
-        duration: .6,
-        ease: 'back.in'
+        scale: 1,
+        duration: 0.6,
+        ease: "back.inOut(3)",
       })
       .to('li', {
         x: 0,

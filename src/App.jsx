@@ -7,6 +7,7 @@ import Trainers from './components/Trainers'
 import Intensive from './components/Intensive';
 import Programs from './components/Programs';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -21,6 +22,7 @@ function App() {
         <Trainers />
         <Intensive />
         <Programs />
+        <Contact />
       </main>
       <Footer />
     </>
