@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Header timeline={startTl.current} />
-      <main>
+      <main className='overflow-x-hidden'>
         <Hero timeline={startTl.current} />
         <Trainers />
         <Intensive />
