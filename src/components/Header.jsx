@@ -35,7 +35,7 @@ const Header = ({ timeline }) => {
 
   return (
     <header ref={container}>
-      <div className="container mx-auto max-w-6xl sm:px-4 px-2">
+      <div className="container mx-auto max-w-6xl px-4">
         <nav>
           <a href="/" className="logo">
             <img

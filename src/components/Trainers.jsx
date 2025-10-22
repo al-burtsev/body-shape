@@ -10,8 +10,8 @@ const Trainers = () => {
 
     const tlSettings = isMobile ? {
         triggerEnd: '25% top',
-        scrub: 0.1,
-        duration: 0.2,
+        scrub: 0.6,
+        duration: 1,
     } : {
         triggerEnd: 'center top',
         scrub: false,
@@ -47,7 +47,7 @@ const Trainers = () => {
 
     return (
         <section id="trainers" className="mb-18 md:mb-37.5 overflow-hidden" ref={sectionRef}>
-            <div className="container mx-auto max-w-6xl sm:px-4 px-2">
+            <div className="container mx-auto max-w-6xl px-4">
                 <h2 className="text-accent text-5xl md:text-8xl text-center font-bold tracking-wider">Персональные тренера</h2>
                 <p className="text-center font-light font-roboto mb-12.5 text-base/8">В нашей команде профессиональные тренеры, которые помогут вам достичь ваших фитнес-целей. Индивидуальный подход, мотивация и поддержка на каждом этапе вашего пути к успеху.</p>
                 <ul className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 sm:gap-4 md:gap-x-7.5 md:gap-y-8 justify-items-center">

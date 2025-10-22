@@ -43,7 +43,7 @@ const Programs = () => {
 
     return (
         <section id="programs" className="mb-18 md:mb-37.5 overflow-hidden" ref={sectionRef}>
-            <div className="container mx-auto max-w-6xl sm:px-4 px-2">
+            <div className="container mx-auto max-w-6xl px-4">
                 <h2 className="text-accent text-5xl md:text-8xl text-center font-bold tracking-wider w-full md:w-1/2 mx-auto">Программы и&nbsp;секции</h2>
                 <p className="text-center font-light font-roboto mb-12.5 text-base/8 w-full md:w-1/2 mx-auto">Разнообразные тренировки и занятия для всех уровней подготовки. Найдите свою идеальную программу и начните путь к здоровью и силе.</p>
                 <ul className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 sm:gap-4 md:gap-x-8 gap-y-16 md:gap-y-26 justify-items-center">
