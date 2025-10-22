@@ -40,7 +40,7 @@ const Contact = () => {
                         <label htmlFor="message" className="font-roboto font-bold">Сообщение</label>
                         <textarea name="message" id="message" rows={7} className="font-roboto font-light border-b-2 border-b-white/30 focus:outline-0 focus:border-b-white"></textarea>
                     </div>
-                    <button type="submit" className="inline-block self-start bg-accent rounded-md text-base/4 tracking-[.25em] text-black text-[19px] px-6 py-3 md:px-12 md:py-4.5 transition duration-400 hover:scale-95">Отправить</button>
+                    <button type="submit" className="inline-block self-start bg-accent rounded-md text-base/4 tracking-[.25em] text-black text-[19px] px-6 py-3 md:px-12 md:py-4.5 transition duration-400 hover:scale-95 cursor-pointer">Отправить</button>
                 </form>
             </div>
         </section>
